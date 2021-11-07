@@ -9,8 +9,12 @@ exports.list_all_tasks = function (req, res) {
 	//res
 	var email = req.query.email;
 	var name = req.query.name.toLowerCase();
+	// load data from database
+	res.json([
+		{ Name: name, Age: 100, Email: email },
+		{ Name: "AliReza", Age: 33, Email: "test" }
 
-	res.json([{ Name: name, Age: 100, Email: email }]);
+	]);
 };
 // Method Type: Post
 // http://127.0.0.1:3000/tasks

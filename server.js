@@ -2,6 +2,13 @@ var express = require('express'),
 	app = express(),
 	port = process.env.PORT || 3000,
 	bodyParser = require('body-parser');
+var cors = require('cors')
+app.use(cors({
+	"origin": "*",
+	"methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+	"preflightContinue": false,
+	"optionsSuccessStatus": 204
+}))
 
 // mongoose instance connection url connection
 // mongoose.Promise = global.Promise;
@@ -19,7 +26,8 @@ routes(app); //register the route
 // Create package.json
 // https://www.codementor.io/@olatundegaruba/nodejs-restful-apis-in-10-minutes-q0sgsfhbd
 
-// Request -->  Route(todoListRoutes)--> Controller(todoListController) -> Reponse
+// Request -->  Route(todoListRoutes)--> Controller(todoListController) -> 
+// npm run start
 
 app.listen(port);
 
