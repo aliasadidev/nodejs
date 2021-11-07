@@ -15,6 +15,11 @@ app.use(bodyParser.json());
 var routes = require('./api/routes/todoListRoutes'); //importing route
 routes(app); //register the route
 
+// *************************************  Read this *****************************
+// Create package.json
+// https://www.codementor.io/@olatundegaruba/nodejs-restful-apis-in-10-minutes-q0sgsfhbd
+
+// Request -->  Route(todoListRoutes)--> Controller(todoListController) -> Reponse
 
 app.listen(port);
 
